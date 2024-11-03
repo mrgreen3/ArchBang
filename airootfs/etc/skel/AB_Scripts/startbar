@@ -1,4 +1,7 @@
 #!/bin/bash
+# A start script for Polybar panel
+# Based on script found on Archlinux Wiki
+# Added by Mr Green [mrgreen@archbang.org]
 
 # Terminate already running bar instances
 killall -q polybar

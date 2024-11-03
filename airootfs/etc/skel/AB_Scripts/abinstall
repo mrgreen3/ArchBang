@@ -727,6 +727,9 @@ install_archbang(){
   # Remove installer from root-menu   
   sed -i '/<!-- abinstall 5 -->/,+5d' ${MNT}/home/ablive/.config/openbox/menu.xml
 
+  # Remove welcome message
+  sed -i '/notify-send/d' ${MNT}/home/ablive/.config/openbox/autostart
+
   # remove autologin from install
   rm -r ${MNT}/etc/systemd/system/getty@tty1.service.d &>/dev/null
 
