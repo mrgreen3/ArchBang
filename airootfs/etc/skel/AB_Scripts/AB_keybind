@@ -3,7 +3,8 @@
 # created by Mr Green [mrgreen@archbang.org]
 
 # Key bindings....
-keybindings="Super + Space --- Application Menu
+keybindings="Super refers to Windows Logo Key, Between Ctrl + ALt
+Super + Space --- Application Menu
 Super + t --- Terminal
 Super + w --- Web Browser
 Super + f --- File Manager
@@ -14,10 +15,9 @@ Super + q --- Close a window
 Super + [1-4] --- Desktop [1-4]
 Super + Shift [1-4] --- Send to Desktop [1-4]
 Super + c --- Reconfigure Openbox
-Super + h --- Keybind Help
 Super + u --- Toggle Window Decorations
 Super + m --- Toggle Maximize a Window
 Super + Shift + Arrow Keys --- Window Snapping
 "
 
-echo -e "$keybindings" | rofi -dmenu -p "ArchBang Keyboard Shortcuts"
+echo -e "$keybindings" | rofi -dmenu -p "ArchBang Openbox Keyboard Shortcuts"
