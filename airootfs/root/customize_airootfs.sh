@@ -40,6 +40,8 @@ ln -sf /usr/share/zoneinfo/Canada/Montreal /etc/localtime
 useradd -m -p "" -G "wheel" -s /bin/bash -g users ablive
 chown ablive /home/ablive
 
+# Link for xterm to allow htop to work in xdg_menu
+ln -s /usr/bin/alacritty /usr/bin/xterm
 
 # Start required systemd services
 systemctl enable {pacman-init,NetworkManager}.service -f
