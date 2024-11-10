@@ -5,24 +5,30 @@ Information here is as up to date as possible.
 
 Please do not post issues or problems related to ArchBang on Archlinux forums it will result in at best your thread closed or worse deleted.
 
-====Xfce4 Window Manager====
+====Openbox Window Manager====
 
 Will give a brief overview of ArchBang version.
 
 Some useful keybinds are:
 
-Control+Alt+t terminal
+Alt + h for ArchBang key binds
 
-You will also see launchers on panel for above, as well as workspaces, networking, system tray and clock.
+Super + t Alacritty Terminal
+Super + w Web Browser
+Super + f File Manager
+
+Right Click on desktop for Main Menu
+
+You will also see launchers on panel for Browser, Terminal and File Manager, as well as workspaces, system tray, volume control and clock.
+
 
 ====Installation====
 
-To run installer open a terminal, change into AB_Scripts directory and run abinstall:
+To run installer either use Super + i or Can be run from main menu.
 
-cd ~/AB_Scripts
-sudo ./abinstall
+The installer is menu driven and very easy to follow. 
 
-The installer is menu driven and very easy to follow.
+Should you need an easier way to set up partitions and filesystems then Gparted is included live. [sudo gparted in a terminal]
 
 ===Pacman===
 
@@ -34,7 +40,7 @@ sudo pacman-key --init
 sudo pacman-key --populate
 sudo pacman -Syu archlinux-keyring
 
-This will create keys, refresh package cache and install archlinux-keyring.
+This will create keys, refresh package cache and update archlinux-keyring.
 
 Then you can search for a package of choice using:
 

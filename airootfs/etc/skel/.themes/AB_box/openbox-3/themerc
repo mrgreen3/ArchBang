@@ -17,6 +17,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+#
+# Modified by Mr Green for ArchBang [mrgreen@archbang.org]
+#
+
 ### WINDOW
 border.width: 2
 
@@ -53,9 +57,12 @@ window.inactive.button.toggled.pressed.image.color: #40e0d0
 window.inactive.button.toggled.hover.image.color: #afb8c5
 
 window.active.title.bg: flat solid
-window.active.title.bg.color: #006400
+
+#####################################
+window.active.title.bg.color: #362D70
 window.active.label.bg: flat solid
-window.active.label.bg.color: #006400
+#####################################
+window.active.label.bg.color: #362D70
 #window.active.handle.bg: texture
 #window.active.grip.bg: texture
 window.inactive.title.bg: flat solid
@@ -106,7 +113,8 @@ menu.items.active.disabled.text.color: #aeb0b6
 menu.items.bg: flat solid
 menu.items.bg.color: #2f343f
 menu.items.active.bg: flat solid
-menu.items.active.bg.color: #006400
+###################################
+menu.items.active.bg.color: #362D70
 menu.title.bg: flat solid
 menu.title.bg.color: #2f343f
 
@@ -127,7 +135,8 @@ osd.bg.color: #2f343f
 osd.label.bg: flat solid
 osd.label.bg.color: #2f343f
 osd.hilight.bg: flat solid
-osd.hilight.bg.color: #006400
+#############################
+osd.hilight.bg.color: #362D70
 osd.unhilight.bg: flat solid
 osd.unhilight.bg.color: #000000
 

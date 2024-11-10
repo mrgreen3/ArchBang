@@ -128,7 +128,7 @@
       <name>3</name>
       <name>4</name>
     </names>
-    <popupTime>875</popupTime>
+    <popupTime>0</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>
@@ -169,7 +169,7 @@
     <direction>Vertical</direction>
     <!-- 'Vertical' or 'Horizontal' -->
     <autoHide>no</autoHide>
-    <hideDelay>300</hideDelay>
+    hideDelay>300</hideDelay>
     <!-- in milliseconds (1000 = 1 second) -->
     <showDelay>300</showDelay>
     <!-- in milliseconds (1000 = 1 second) -->
@@ -294,6 +294,11 @@
         </finalactions>
       </action>
     </keybind>
+ 	<keybind key="W-Tab">
+      <action name="Execute">
+	  <command>rofi -show window</command>
+      </action>
+    </keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow">
         <finalactions>
@@ -413,7 +418,7 @@
         <command>l3afpad</command>
       </action>
     </keybind>
-    <keybind key="W-h">
+    <keybind key="A-h">
       <action name="Execute">
         <command>AB_keybind</command>
       </action>
@@ -814,9 +819,7 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-  <application type="normal">
-        <desktop>all</desktop>
-    </application>
+
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.

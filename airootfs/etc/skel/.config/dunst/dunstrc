@@ -1,15 +1,19 @@
-[global]
-font = Sans 10
-format = "%s"
-timeout = 5
-frame_width = 1
-icon_theme = Arc 
-enable_recursive_icon_lookup = true
-origin = top-right
-offset = 10x10
-frame_color = "#2A5882"
-background = "#131c26"
-foreground = "#FFFFFF"
-width = 200
+# Dunst config
+# by Mr Green [mrgreen@archbang.org]
+# With help from Joe ;-)
 
-show_indicators = no
+[global]
+  width = 300
+  origin = top-right
+  offset = 10x10
+  font = Sans 10
+  frame_color = "#362D70"  
+  frame_width = 2
+  background = "#1E1E1E"  
+  foreground = "#FFFFFF" 
+  padding = 10
+  horizontal_padding = 10
+  alignment = left
+  timeout = 5
+  icon_path = /usr/share/Arc/status/16@2x
+

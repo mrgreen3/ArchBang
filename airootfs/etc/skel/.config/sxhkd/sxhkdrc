@@ -1,0 +1,37 @@
+# Sxhkdrc 
+# for ArchBang Linux
+# by Mr Green [mrgreen@archbang.org]
+
+# Launch Terminal
+{alt,super} + t
+    alacritty 
+
+# File manager
+{alt,super} + f
+    thunar
+
+# Browser
+{alt,super} + w
+	firefox
+
+# Editor
+{alt,super} + e
+	l3afpad
+
+{alt,super} + r
+	rofi -show drun
+
+# Launch a custom script (replace with the path to your script)
+#super + p
+#    ~/scripts/my_custom_script.sh
+
+# Volume Controls with PulseAudio
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+

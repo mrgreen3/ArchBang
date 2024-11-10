@@ -5,10 +5,10 @@
 #
 
 # Set screen size more for own use in VB..
-#xrandr -s 1920x1080
+#xrandr -s 1920x1080 &
 
 # Apply background image..
-feh --bg-scale ~/Backgrounds/beach.jpg
+feh --bg-scale ~/Backgrounds/mountains.jpg
 
 # Battery/AC applet
 cbatticon -n &
@@ -27,5 +27,8 @@ setxkbmap -layout "us" &
 
 # Start Dunst then show a welcome note!
 dunst &
+
+# Start Sxhkd keyboard daemon
+#sxhkd &
 
 (sleep 2 && notify-send "Use Alt+h to view keyboard shortcuts") &
