@@ -29,6 +29,6 @@ setxkbmap -layout "us" &
 dunst &
 
 # Start Sxhkd keyboard daemon
-#sxhkd &
+sxhkd &
 
 (sleep 2 && notify-send "Use Alt+h to view keyboard shortcuts") &

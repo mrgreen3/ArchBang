@@ -1,6 +1,0 @@
-./airootfs/etc/skel/.themes/AB_box/openbox-3/themerc:window.active.title.bg.color: #006400
-./airootfs/etc/skel/.themes/AB_box/openbox-3/themerc:window.active.label.bg.color: #006400
-./airootfs/etc/skel/.themes/AB_box/openbox-3/themerc:menu.items.active.bg.color: #006400
-./airootfs/etc/skel/.themes/AB_box/openbox-3/themerc:osd.hilight.bg.color: #006400
-./airootfs/etc/skel/.config/polybar/config.ini:primary = #006400
-./airootfs/etc/skel/.config/polybar/config.ini:tray-foreground = #006400

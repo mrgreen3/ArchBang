@@ -169,7 +169,7 @@
     <direction>Vertical</direction>
     <!-- 'Vertical' or 'Horizontal' -->
     <autoHide>no</autoHide>
-    <hideDelay>300</hideDelay>
+    hideDelay>300</hideDelay>
     <!-- in milliseconds (1000 = 1 second) -->
     <showDelay>300</showDelay>
     <!-- in milliseconds (1000 = 1 second) -->
@@ -377,6 +377,52 @@
         <height>50%</height>
       </action>
     </keybind>
+    <!-- Keybindings for running applications in ArchBang -->
+    <keybind key="W-t">
+      <action name="Execute">
+        <command>alacritty</command>
+      </action>
+    </keybind>
+    <keybind key="W-Return">
+      <action name="Execute">
+        <command>alacritty</command>
+      </action>
+    </keybind>
+    <keybind key="W-w">
+      <action name="Execute">
+        <command>firefox</command>
+      </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="Execute">
+        <command>thunar</command>
+      </action>
+    </keybind>
+	 <keybind key="W-c">
+      <action name="Execute">
+        <command>openbox --reconfigure</command>
+      </action>
+    </keybind>
+    <keybind key="W-r">
+      <action name="Execute">
+        <command>rofi -show drun</command>
+      </action>
+    </keybind>
+    <keybind key="W-g">
+      <action name="Execute">
+        <command>l3afpad /home/ablive/Documents/Guide</command>
+      </action>
+    </keybind>
+    <keybind key="W-e">
+      <action name="Execute">
+        <command>l3afpad</command>
+      </action>
+    </keybind>
+    <keybind key="A-h">
+      <action name="Execute">
+        <command>AB_keybind</command>
+      </action>
+    </keybind>
     <keybind key="W-m">
       <action name="ToggleMaximize"/>
     </keybind>
@@ -391,6 +437,27 @@
 	<keybind key="W-u">
 		<action name="ToggleDecorations"/>
 	</keybind>
+	<!-- Fullscreen Screenshot -->
+<keybind key="Print">
+    <action name="Execute">
+        <command>scrot ~/Pictures/screenshot_%d-%m-%Y_%H-%M.png</command>
+    </action>
+</keybind>
+
+<!-- Select Area Screenshot -->
+<keybind key="Shift+Print">
+    <action name="Execute">
+        <command>scrot -s ~/Pictures/screenshot_%d-%m-%Y_%H-%M.png</command>
+    </action>
+</keybind>
+
+<!-- Active Window Screenshot -->
+<keybind key="Ctrl+Print">
+    <action name="Execute">
+        <command>scrot -u ~/Pictures/screenshot_%d-%m-%Y_%H-%M.png</command>
+    </action>
+</keybind>
+
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

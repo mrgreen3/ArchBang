@@ -3,7 +3,7 @@ Welcome to ArchBang Live a live iso [www.archbang.org/Guide].
 
 Information here is as up to date as possible.
 
-Please do not post issues or problems related to ArchBang on Archlinux forums it will result in at best your thread closed or worse deleted.
+**Please do not post issues or problems related to ArchBang on Archlinux forums it will result in at best your thread closed or worse deleted.**
 
 ====Openbox Window Manager====
 
@@ -13,9 +13,15 @@ Some useful keybinds are:
 
 Alt + h for ArchBang key binds
 
-Super + t Alacritty Terminal
-Super + w Web Browser
-Super + f File Manager
+Super + t --- Alacritty Terminal
+Super + w --- Web Browser
+Super + f --- File Manager
+
+Key binds above will also work with Alt key.
+
+Super + [1-4] --- Switch to Dekstop [1-4]
+Super + Shift + [1-4] --- Move Active window to Desktop [1-4]
+Super + q --- Closes a selcted window
 
 Right Click on desktop for Main Menu
 

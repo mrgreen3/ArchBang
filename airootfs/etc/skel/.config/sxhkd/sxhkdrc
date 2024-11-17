@@ -18,12 +18,33 @@
 {alt,super} + e
 	l3afpad
 
+# Rofi Application launcher
 {alt,super} + r
 	rofi -show drun
 
-# Launch a custom script (replace with the path to your script)
-#super + p
-#    ~/scripts/my_custom_script.sh
+# Display ArchBang Guide
+{alt,super} + g
+	l3afpad /home/ablive/Documents/Guide
+
+# Show ArchBang keybinds
+{alt,super} + h
+	AB_keybind
+
+# Reconfigure Openbox after changes to menu.xml, rc.xml
+{alt,super} + c
+	openbox --reconfigure
+
+# Fullscreen Shot
+Print
+	scrot ~/Pictures/screenshot_%d-%m-%Y_%H-%M.png
+
+# Selected Area of Screen
+Print + shift
+	scrot -s ~/Pictures/screenshot_%d-%m-%Y_%H-%M.png
+
+# Active Window
+Print + ctrl
+	scrot -u ~/Pictures/screenshot_%d-%m-%Y_%H-%M.png
 
 # Volume Controls with PulseAudio
 XF86AudioRaiseVolume
