@@ -28,7 +28,7 @@
 
 # Show ArchBang keybinds
 {alt,super} + h
-	AB_keybind
+	keybinds
 
 # Reconfigure Openbox after changes to menu.xml, rc.xml
 {alt,super} + c

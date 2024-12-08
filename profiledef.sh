@@ -3,7 +3,7 @@
 # Profile modified for ArchBang
 # by Mr Green [mrgreen@archbang.org]
 
-iso_name="archbang-rc"
+iso_name="archbang-test"
 iso_label="ARCHBANG_$(date +%d%m)"
 iso_publisher="ArchBang Linux <https://www.archbang.org>"
 iso_application="ArchBang Linux Live/Rescue Iso"

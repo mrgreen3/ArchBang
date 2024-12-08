@@ -3,7 +3,7 @@ general.import = ["~/.config/alacritty/themes/catppuccin_mocha.toml",]
 general.ipc_socket = true
 
 [font]
-size = 9
+size = 8
 
 [font.bold]
 family = "monospace"

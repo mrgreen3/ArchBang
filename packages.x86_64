@@ -38,6 +38,8 @@ polybar
 obconf
 lxappearance-gtk3
 rofi
+#jgmenu
+archinstall
 dunst
 wmctrl
 sxhkd
@@ -50,6 +52,7 @@ l3afpad
 gvfs
 gsimplecal
 htop
+picom
 
 # Gtk, Icons, Theme
 gnome-themes-extra

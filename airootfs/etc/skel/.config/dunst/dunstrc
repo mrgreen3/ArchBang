@@ -16,4 +16,5 @@
   alignment = left
   timeout = 5
   icon_path = /usr/share/Arc/status/16@2x
+  show_indicators = no
 

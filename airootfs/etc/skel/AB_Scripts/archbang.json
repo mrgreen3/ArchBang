@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "post_install_script": "/home/ablive/AB_Scripts/archbang_setup.sh"
+}
+

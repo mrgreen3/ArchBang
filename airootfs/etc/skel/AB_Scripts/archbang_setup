@@ -1,0 +1,37 @@
+#!/bin/bash
+set -e
+
+# Repository URL for ArchBang files
+REPO_URL="https://github.com/mrgreen3/ArchBang/archive/refs/heads/main.zip"
+TEMP_DIR="/tmp/archbang"
+TARGET_DIR="/"
+
+echo "Starting ArchBang setup..."
+
+# Download the repository
+echo "Downloading ArchBang files from GitHub..."
+mkdir -p "$TEMP_DIR"
+curl -L "$REPO_URL" -o "$TEMP_DIR/archbang.zip"
+
+# Extract the files
+echo "Extracting files..."
+unzip "$TEMP_DIR/archbang.zip" -d "$TEMP_DIR"
+
+# Copy overlay files
+echo "Copying overlay files..."
+rsync -avh --no-perms "$TEMP_DIR/ArchBang-main/airootfs/" "$TARGET_DIR"
+
+# Install required packages
+echo "Installing required packages..."
+while read -r package; do
+    if [[ ! -z "$package" ]]; then
+        pacman -S --needed --noconfirm "$package"
+    fi
+done < "$TEMP_DIR/ArchBang-main/packages.x86_64"
+
+# Clean up
+echo "Cleaning up temporary files..."
+rm -rf "$TEMP_DIR"
+
+echo "ArchBang setup is complete!"
+

@@ -23,10 +23,13 @@ setxkbmap -layout "us" &
 #setxkbmap -option altwin:swap_alt_win
 
 # Start Panel
-(sleep 2 && AB_startbar) &
+(sleep 2 && startpanel) &
 
 # Start Dunst then show a welcome note!
 dunst &
+
+# Some nice windows effects....
+#picom &
 
 # Start Sxhkd keyboard daemon
 sxhkd &
