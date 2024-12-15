@@ -3,16 +3,16 @@
 # Profile modified for ArchBang
 # by Mr Green [mrgreen@archbang.org]
 
-iso_name="archbang-test"
+iso_name="archbang"
 iso_label="ARCHBANG_$(date +%d%m)"
 iso_publisher="ArchBang Linux <https://www.archbang.org>"
 iso_application="ArchBang Linux Live/Rescue Iso"
 iso_version="$(date +%d%m)"
 install_dir="arch"
 buildmodes=("iso")
-#bootmodes=('bios.syslinux.mbr' 'bios.syslinux.eltorito' 'uefi-x64.systemd-boot.esp' 'uefi-x64.systemd-boot.eltorito')
-bootmodes=('bios.syslinux.mbr' 'bios.syslinux.eltorito' 'uefi-ia32.grub.esp' 'uefi-x64.grub.esp' 'uefi-ia32.grub.eltorito' 'uefi-x64.grub.eltorito')
-
+bootmodes=('bios.syslinux.mbr' 'bios.syslinux.eltorito'
+           'uefi-ia32.systemd-boot.esp' 'uefi-x64.systemd-boot.esp'
+           'uefi-ia32.systemd-boot.eltorito' 'uefi-x64.systemd-boot.eltorito')
 arch="x86_64"
 pacman_conf="pacman.conf"
 airootfs_image_type="squashfs"
