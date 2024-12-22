@@ -12,7 +12,7 @@ configuration {
     scroll-method:       0;
     disable-history:     false;
     sidebar-mode:        false;
-	terminal:            "/usr/bin/foot";
+	terminal:            "/usr/bin/alacritty";
 }
 
 /* set from within the following [global] */

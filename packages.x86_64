@@ -38,7 +38,7 @@ polybar
 obconf
 lxappearance-gtk3
 rofi
-#jgmenu
+jgmenu
 archinstall
 dunst
 wmctrl
