@@ -16,4 +16,4 @@ configuration {
 }
 
 /* set from within the following [global] */
-@theme "/home/ablive/.config/rofi/ab-dark.rasi" 
+@theme "~/.config/rofi/ab-dark.rasi" 

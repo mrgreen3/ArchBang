@@ -24,7 +24,7 @@
 
 # Display ArchBang Guide
 {alt,super} + g
-	l3afpad /home/ablive/Documents/Guide
+	l3afpad ~/Documents/Guide
 
 # Show ArchBang keybinds
 {alt,super} + h

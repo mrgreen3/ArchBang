@@ -723,7 +723,10 @@ install_archbang(){
 
   # Remove abinstall from target device
   rm -f ${MNT}/home/ablive/AB_Scripts/abinstall &> /dev/null
- 
+
+  # Remove abisntall from jgmenu prepend.csv
+  sed -i '/Install/{N;d}' ${MNT}/home/ablive/.config/jgmenu/prepend.csv
+
   # Remove installer from root-menu   
   sed -i '/<!-- abinstall 5 -->/,+5d' ${MNT}/home/ablive/.config/openbox/menu.xml
 
@@ -965,6 +968,7 @@ configure_bootloader(){
               echo -e "title\tArch Linux\nlinux\t/vmlinuz-linux\ninitrd\t/initramfs-linux.img\noptions\troot=\/dev\/mapper\/${ROOT_PART} rw" > ${MNT}/boot/loader/entries/arch.conf
             else
               echo -e "title\tArch Linux\nlinux\t/vmlinuz-linux\ninitrd\t/${cpu_id}-ucode.img\ninitrd\t/initramfs-linux.img\noptions\troot=PARTUUID=${partuuid} rw" > ${MNT}/boot/loader/entries/arch.conf
+			  echo -e "title\tArch Linux Fallback\nlinux\t/vmlinuz-linux\ninitrd\t/${cpu_id}-ucode.img\ninitrd\t/initramfs-linux-fallback.img\noptions\troot=PARTUUID=${partuuid} rw" > ${MNT}/boot/loader/entries/arch-fallback.conf
             fi
             echo -e "default  arch.conf\ntimeout  5" > ${MNT}/boot/loader/loader.conf
             pause_function

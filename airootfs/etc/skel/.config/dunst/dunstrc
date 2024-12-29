@@ -7,7 +7,7 @@
   origin = top-right
   offset = 10x10
   font = Sans 10
-  frame_color = "#362D70"  
+  frame_color = "#3D273E"  
   frame_width = 2
   background = "#1E1E1E"  
   foreground = "#FFFFFF" 

@@ -53,3 +53,5 @@ systemctl set-default graphical.target
 cp -rf "/usr/share/mkinitcpio/hook.preset" "/etc/mkinitcpio.d/linux.preset"
 sed -i 's?%PKGBASE%?linux?' "/etc/mkinitcpio.d/linux.preset"
 
+# Copy custom profile into Archinstall desktops folder
+cp /etc/skel/.config/archinstall/ArchBang.py /usr/lib/python3.*/site-packages/archinstall/default_profiles/desktops

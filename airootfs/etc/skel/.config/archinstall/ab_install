@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+# ArchBang archinstall pacman and config files
+# Modified by Mr Green [mrgreen@archbang.org]
+
+echo "ArchBang setup script..."
+
+# Define variables
+TARGET_MOUNTPOINT="/mnt/archinstall"
+SKEL_DIR="/etc/skel"
+TARGET_SKEL="${TARGET_MOUNTPOINT}${SKEL_DIR}"
+
+# Copy configuration files to the target system
+echo "Copying configuration files from $SKEL_DIR to $TARGET_MOUNTPOINT/etc/skel..."
+if [ -d "$SKEL_DIR" ]; then
+    cp -r "$SKEL_DIR/." "$TARGET_MOUNTPOINT/etc/skel/"
+
+	# Remove abinstall from target device ... target_mountpoint/skel_dir /mnt/archinstall/etc/skel add a variable above
+    rm -f ${TARGET_SKEL}/AB_Scripts/abinstall &> /dev/null
+
+    # Remove abisntall from jgmenu prepend.csv
+    sed -i '/Install/{N;d}' ${TARGET_SKEL}/.config/jgmenu/prepend.csv
+
+    # Remove installer from root-menu
+    sed -i '/<!-- abinstall 5 -->/,+5d' ${TARGET_SKEL}/.config/openbox/menu.xml
+
+    echo "Configuration files copied to /etc/skel."
+
+    # Copy skel files (including hidden) to user home directories
+    for USER_HOME in "$TARGET_MOUNTPOINT/home/"*; do
+        if [ -d "$USER_HOME" ]; then
+            echo "Copying skel files to $USER_HOME..."
+            cp -r "$TARGET_MOUNTPOINT/etc/skel/." "$USER_HOME/"
+
+            # Change ownership using arch-chroot
+            USERNAME=$(basename "$USER_HOME")
+            echo "Changing ownership for $USER_HOME to $USERNAME:$USERNAME..."
+            arch-chroot "$TARGET_MOUNTPOINT" chown -R "$USERNAME":"$USERNAME" "/home/$USERNAME"
+            echo "Ownership updated for $USER_HOME."
+        fi
+    done
+else
+    echo "Error: Source /etc/skel directory does not exist."
+fi
+
+
+echo "ArchBang setup script completed."
+

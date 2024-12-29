@@ -53,10 +53,12 @@ gvfs
 gsimplecal
 htop
 picom
+gpick
 
 # Gtk, Icons, Theme
 gnome-themes-extra
 arc-icon-theme
+tela-circle-icon-theme-green
 awesome-terminal-fonts
 #elementary-icon-theme
 
