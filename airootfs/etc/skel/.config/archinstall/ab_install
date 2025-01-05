@@ -17,11 +17,8 @@ if [ -d "$SKEL_DIR" ]; then
 	# Remove abinstall from target device ... target_mountpoint/skel_dir /mnt/archinstall/etc/skel add a variable above
     rm -f ${TARGET_SKEL}/AB_Scripts/abinstall &> /dev/null
 
-    # Remove abisntall from jgmenu prepend.csv
+    # Remove abinstall from jgmenu prepend.csv
     sed -i '/Install/{N;d}' ${TARGET_SKEL}/.config/jgmenu/prepend.csv
-
-    # Remove installer from root-menu
-    sed -i '/<!-- abinstall 5 -->/,+5d' ${TARGET_SKEL}/.config/openbox/menu.xml
 
     echo "Configuration files copied to /etc/skel."
 

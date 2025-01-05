@@ -24,14 +24,6 @@
       <command>l3afpad</command>
    </action>
 </item>
-<!-- abinstall 5 -->
-<item label="Install">
-   <action name="Execute">
-      <command>alacritty -e sudo /home/ablive/AB_Scripts/abinstall</command>
-   </action>
-</item>
-<separator />
-<menu id="applications" label="Applications" execute="xdg_menu --format openbox3-pipe --root-menu /etc/xdg/menus/arch-applications.menu" />
 <separator />
 
 <menu id="settings_menu" label="Settings">

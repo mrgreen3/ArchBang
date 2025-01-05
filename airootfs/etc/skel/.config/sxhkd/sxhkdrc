@@ -22,6 +22,10 @@
 {alt,super} + r
 	rofi -show drun
 
+# Open Jgmenu
+{alt, super} + Return 
+	jgmenu_run
+
 # Display ArchBang Guide
 {alt,super} + g
 	l3afpad ~/Documents/Guide

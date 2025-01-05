@@ -698,8 +698,8 @@
         </action>
       </mousebind>
       <mousebind button="Right" action="Press">
-        <action name="ShowMenu">
-          <menu>root-menu</menu>
+        <action name="Execute">
+          <command>jgmenu_run</command>
         </action>
       </mousebind>
     </context>

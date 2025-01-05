@@ -25,7 +25,7 @@ Super + q --- Closes a selcted window
 
 Right Click on desktop for Main Menu
 
-You will also see launchers on panel for Browser, Terminal and File Manager, as well as workspaces, system tray, volume control and clock.
+You will also see launchers on panel for Menu, Browser, Terminal and File Manager, as well as workspaces, system tray, volume control and clock.
 
 
 ====Installation====
@@ -36,15 +36,13 @@ The installer is menu driven and very easy to follow.
 
 Should you need an easier way to set up partitions and filesystems then Gparted is included live. [sudo gparted in a terminal]
 
-===Pacman===
+===Post Install===
 
-To get pacman running live you will need a working network connection, either wired [connects automatically] or wireless via network icon on panel [click on it!].
-
-Live you do not need to do the following commands but post install you will need to set up pacman keys open a terminal and run:
+Pacman will not work until you do the following in a terminal:
 
 sudo pacman-key --init
 sudo pacman-key --populate
-sudo pacman -Syu archlinux-keyring
+sudo pacman -Sy --needed archlinux-keyring && sudo pacman -Su
 
 This will create keys, refresh package cache and update archlinux-keyring.
 
@@ -69,5 +67,5 @@ By default pacman mirrorlist is un-commented to allow it to work live, read Arch
 
 https://wiki.archlinux.org/title/Mirrors
 
-© 2024 ArchBang Live Iso
+© 2025 ArchBang Live Iso
 

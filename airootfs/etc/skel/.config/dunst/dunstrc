@@ -3,17 +3,18 @@
 # With help from Joe ;-)
 
 [global]
-  width = 300
+  width = 150
   origin = top-right
-  offset = 10x10
-  font = Sans 10
+  offset = (10,10)
+  font = Dejavu Sans 8
+  format = "%s"
   frame_color = "#3D273E"  
   frame_width = 2
   background = "#1E1E1E"  
   foreground = "#FFFFFF" 
-  padding = 10
-  horizontal_padding = 10
-  alignment = left
+  padding = 5
+  horizontal_padding = 5
+  alignment = center
   timeout = 5
   icon_path = /usr/share/Arc/status/16@2x
   show_indicators = no
