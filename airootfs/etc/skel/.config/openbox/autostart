@@ -8,7 +8,7 @@
 #xrandr -s 1920x1080 &
 
 # Apply background image..
-feh --bg-scale ~/Backgrounds/deep_space.jpg
+feh --bg-scale ~/Backgrounds/stormysea.jpg
 
 # Battery/AC applet
 cbatticon -n &

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# POLYWINS
+# POLYWINS script for showing window titles in Polybar
 # Modified for ArchBang by MrGreen [mrgreen@archbang.org]
 
 # SETTINGS {{{ ---

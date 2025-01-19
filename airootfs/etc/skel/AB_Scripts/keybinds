@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Script to display keybinds for sway in via rofi
 # created by Mr Green [mrgreen@archbang.org]
 

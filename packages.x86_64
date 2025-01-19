@@ -1,4 +1,3 @@
-
 ## Archive Tools
 zip
 unzip
@@ -53,6 +52,8 @@ l3afpad
 gvfs
 #gsimplecal
 htop
+btop
+nvtop
 #gpick
 
 # Gtk, Icons, Theme
