@@ -178,6 +178,142 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+	<!-- Keybinds for ArchBang -->
+	<keybind key="W-t">
+      <action name="execute">
+	  <command>alacritty</command>
+      </action>
+    </keybind>
+
+	<keybind key="W-w">
+      <action name="execute">
+	  <command>firefox</command>
+      </action>
+    </keybind>
+	
+	<keybind key="W-f">
+      <action name="execute">
+	  <command>thunar</command>
+      </action>
+    </keybind>
+	
+	<keybind key="W-e">
+      <action name="execute">
+	  <command>l3afpad</command>
+      </action>
+    </keybind>
+	
+	<keybind key="W-d">
+      <action name="execute">
+	  <command>rofi -show drun</command>
+      </action>
+    </keybind>
+	
+	<keybind key="W-h">
+      <action name="execute">
+	  <command>l3afpad ~/Documents/keybinds</command>
+      </action>
+    </keybind>
+
+	<keybind key="W-g">
+      <action name="execute">
+	  <command>l3afpad ~/Ducuments/guide</command>
+      </action>
+    </keybind>
+	
+	 <keybind key="W-space">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
+    </keybind>
+
+	<keybind key="Print">
+    <action name="Execute">
+        <command>scrot-notify f</command>
+    </action>
+	</keybind>
+
+	<keybind key="W-Print">
+    <action name="Execute">
+        <command>scrot-notify w</command>
+    </action>
+	</keybind>
+
+	<keybind key="W-S-Print">
+    <action name="Execute">
+        <command>scrot-notify a</command>
+    </action>
+	</keybind>
+
+	<keybind key="A-t">
+      <action name="execute">
+	  <command>alacritty</command>
+      </action>
+    </keybind>
+
+	<keybind key="A-w">
+      <action name="execute">
+	  <command>firefox</command>
+      </action>
+    </keybind>
+	
+	<keybind key="A-f">
+      <action name="execute">
+	  <command>thunar</command>
+      </action>
+    </keybind>
+	
+	<keybind key="A-e">
+      <action name="execute">
+	  <command>l3afpad</command>
+      </action>
+    </keybind>
+	
+	<keybind key="A-d">
+      <action name="execute">
+	  <command>rofi -show drun</command>
+      </action>
+    </keybind>
+	
+	<keybind key="A-h">
+      <action name="execute">
+	  <command>l3afpad ~/Documents/keybinds</command>
+      </action>
+    </keybind>
+
+	<keybind key="A-g">
+      <action name="execute">
+	  <command>l3afpad ~/Ducuments/guide</command>
+      </action>
+    </keybind>
+	
+	 <keybind key="A-space">
+      <action name="ShowMenu">
+        <menu>root-menu</menu>
+      </action>
+    </keybind>
+
+	<keybind key="Print">
+    <action name="Execute">
+        <command>scrot-notify f</command>
+    </action>
+	</keybind>
+
+	<keybind key="A-Print">
+    <action name="Execute">
+        <command>scrot-notify w</command>
+    </action>
+	</keybind>
+
+	<keybind key="A-S-Print">
+    <action name="Execute">
+        <command>scrot-notify a</command>
+    </action>
+	</keybind>
+
+
+	<!-- End of ArchBang keybinds -->
+
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
@@ -279,7 +415,7 @@
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <keybind key="A-space">
+    <keybind key="A-S-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
       </action>
@@ -294,12 +430,7 @@
         </finalactions>
       </action>
     </keybind>
- 	<keybind key="W-Tab">
-      <action name="Execute">
-	  <command>rofi -show window</command>
-      </action>
-    </keybind>
-    <keybind key="A-S-Tab">
+     <keybind key="A-S-Tab">
       <action name="PreviousWindow">
         <finalactions>
           <action name="Focus"/>
@@ -380,11 +511,6 @@
     <keybind key="W-m">
       <action name="ToggleMaximize"/>
     </keybind>
-    <keybind key="W-space">
-      <action name="ShowMenu">
-        <menu>root-menu</menu>
-      </action>
-    </keybind>
     <keybind key="W-q">
       <action name="Close"/>
     </keybind>
@@ -408,9 +534,6 @@
       <mousebind button="A-Left" action="Press">
         <action name="Focus"/>
         <action name="Raise"/>
-      </mousebind>
-      <mousebind button="A-Left" action="Click">
-        <action name="Unshade"/>
       </mousebind>
       <mousebind button="A-Left" action="Drag">
         <action name="Move"/>
@@ -698,8 +821,8 @@
         </action>
       </mousebind>
       <mousebind button="Right" action="Press">
-        <action name="Execute">
-          <command>jgmenu_run</command>
+		<action name="ShowMenu">
+		  <menu>root-menu</menu>  
         </action>
       </mousebind>
     </context>

@@ -15,7 +15,6 @@ xorg-xinit
 xorg-xkill
 ttf-dejavu
 xorg-xrdb
-xorg-xrandr
 
 # Sound
 pipewire
@@ -31,18 +30,17 @@ thunar
 thunar-volman
 tumbler
 alacritty
-#archlinux-xdg-menu
+archlinux-xdg-menu
 openbox
 polybar
 obconf
 lxappearance-gtk3
+lxrandr-gtk3
 rofi
-jgmenu
 archinstall
 dunst
 wmctrl
 slop
-sxhkd
 udisks2
 xdotool
 cbatticon
@@ -50,7 +48,7 @@ laptop-detect
 xdg-user-dirs
 l3afpad
 gvfs
-#gsimplecal
+gsimplecal
 htop
 btop
 nvtop
@@ -58,8 +56,8 @@ nvtop
 
 # Gtk, Icons, Theme
 gnome-themes-extra
-#arc-icon-theme
-tela-circle-icon-theme-green
+arc-icon-theme
+arc-gtk-theme
 awesome-terminal-fonts
 #elementary-icon-theme
 
@@ -181,7 +179,6 @@ pciutils
 perl
 procps-ng
 psmisc
-reiserfsprogs
 s-nail
 sed
 shadow

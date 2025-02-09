@@ -1,0 +1,19 @@
+#!/bin/bash
+# Yay Aur helper install script.
+# modified by Mr Green for ArchBang Linux
+
+# Install required dependencies
+sudo pacman -Syu --needed --noconfirm git base-devel
+
+# Clone, build, and install yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+
+# Clean up
+cd ..
+rm -rf yay
+
+# Check and confirm installation
+command -v yay &> /dev/null && echo "yay is installed." || echo "yay installation failed."
+

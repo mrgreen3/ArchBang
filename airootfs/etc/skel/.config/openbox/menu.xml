@@ -3,7 +3,7 @@
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
 <menu id="root-menu" label="Openbox 3">
-<separator label="Main Menu" />
+<separator label="ArchBang" />
 <item label="Terminal">
    <action name="Execute">
       <command>alacritty</command>
@@ -11,7 +11,7 @@
 </item>
 <item label="Browser">
    <action name="Execute">
-      <command>firefox https://archbang.org</command>
+      <command>firefox https://archbang.org/</command>
    </action>
 </item>
 <item label="File Manager">
@@ -24,6 +24,14 @@
       <command>l3afpad</command>
    </action>
 </item>
+<!-- abinstall 5 -->
+<item label="Install">
+   <action name="Execute">
+      <command>alacritty -e sudo ~/AB_Scripts/abinstall</command>
+   </action>
+</item>
+<separator />
+<menu id="applications" label="Applications" execute="xdg_menu --format openbox3-pipe --root-menu /etc/xdg/menus/arch-applications.menu" />
 <separator />
 
 <menu id="settings_menu" label="Settings">
@@ -37,6 +45,12 @@
       <command>lxappearance</command>
     </action>
   </item>
+  <item label="Keybinds">
+    <action name="Execute">
+      <command>l3afpad ~/Documents/keybinds</command>
+    </action>
+  </item>
+
  <item label="Panel">
     <action name="Execute">
       <command>l3afpad ~/.config/polybar/config.ini</command>
@@ -68,4 +82,5 @@
 
 </menu>    
 </openbox_menu>
+
 

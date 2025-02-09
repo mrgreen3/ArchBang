@@ -1,0 +1,33 @@
+#!/bin/bash
+# Screenshot script for ArchBang Linux
+
+# Screenshot directory
+save_dir="$HOME/Pictures"
+mkdir -p "$save_dir"
+
+# Timestamp format
+timestamp=$(date +"%d-%m-%Y-%H%M%S")
+
+# Determine screenshot type
+case "$1" in
+    f)  # Fullscreen
+        filename="${timestamp}_full.png"
+        scrot "$filename" -e "mv \$f $save_dir"
+        notify-send "Screenshot Taken" "Fullscreen saved to $save_dir/$filename"
+        ;;
+    w)  # Active window
+        filename="${timestamp}_win.png"
+        scrot "$filename" -u -e "mv \$f $save_dir"
+        notify-send "Screenshot Taken" "Window saved to $save_dir/$filename"
+        ;;
+    a)  # Select area
+        filename="${timestamp}_area.png"
+        scrot "$filename" -s -e "mv \$f $save_dir"
+        notify-send "Screenshot Taken" "Selection saved to $save_dir/$filename"
+        ;;
+    *)
+        notify-send "Screenshot Error" "Usage: $0 {f|w|a}"
+        exit 1
+        ;;
+esac
+

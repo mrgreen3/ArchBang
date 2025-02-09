@@ -59,10 +59,10 @@ window.inactive.button.toggled.hover.image.color: #afb8c5
 window.active.title.bg: flat solid
 
 #####################################
-window.active.title.bg.color: #445F33
+window.active.title.bg.color: #5C68A4
 window.active.label.bg: flat solid
 #####################################
-window.active.label.bg.color: #445F33
+window.active.label.bg.color: #5C68A4
 #window.active.handle.bg: texture
 #window.active.grip.bg: texture
 window.inactive.title.bg: flat solid
@@ -114,7 +114,7 @@ menu.items.bg: flat solid
 menu.items.bg.color: #2f343f
 menu.items.active.bg: flat solid
 ###################################
-menu.items.active.bg.color: #445F33
+menu.items.active.bg.color: #5C68A4
 menu.title.bg: flat solid
 menu.title.bg.color: #2f343f
 
@@ -136,7 +136,7 @@ osd.label.bg: flat solid
 osd.label.bg.color: #2f343f
 osd.hilight.bg: flat solid
 #############################
-osd.hilight.bg.color: #445F33
+osd.hilight.bg.color: #5C68A4
 osd.unhilight.bg: flat solid
 osd.unhilight.bg.color: #000000
 

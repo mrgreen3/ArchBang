@@ -727,6 +727,9 @@ install_archbang(){
   # Remove abisntall from jgmenu prepend.csv
   sed -i '/Install/{N;d}' ${MNT}/home/ablive/.config/jgmenu/prepend.csv
 
+  # Remove installer from root-menu   
+  sed -i '/<!-- abinstall 5 -->/,+5d' ${MNT}/home/ablive/.config/openbox/menu.xml
+
   # remove autologin from install
   rm -r ${MNT}/etc/systemd/system/getty@tty1.service.d &>/dev/null
 

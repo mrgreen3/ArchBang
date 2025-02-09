@@ -8,7 +8,7 @@
 #xrandr -s 1920x1080 &
 
 # Apply background image..
-feh --bg-scale ~/Backgrounds/stormysea.jpg
+feh --bg-scale ~/Backgrounds/peng.jpg
 
 # Battery/AC applet
 cbatticon -n &
@@ -19,19 +19,10 @@ nm-applet &
 # Set keyboard layout..
 setxkbmap -layout "us" &
 
-# Work around for running under Virtualbox
-#setxkbmap -option altwin:swap_alt_win
-
 # Start Panel
 (sleep 2 && startpanel) &
 
 # Start Dunst then show a welcome note!
 dunst &
-
-# Some nice windows effects....
-#picom &
-
-# Start Sxhkd keyboard daemon
-sxhkd &
 
 (sleep 2 && notify-send "Use Alt+h to view keyboard shortcuts") &
