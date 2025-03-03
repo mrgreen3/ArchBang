@@ -52,7 +52,7 @@ gsimplecal
 htop
 btop
 nvtop
-#gpick
+gpick
 
 # Gtk, Icons, Theme
 gnome-themes-extra

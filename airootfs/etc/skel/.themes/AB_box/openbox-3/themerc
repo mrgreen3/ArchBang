@@ -59,10 +59,10 @@ window.inactive.button.toggled.hover.image.color: #afb8c5
 window.active.title.bg: flat solid
 
 #####################################
-window.active.title.bg.color: #5C68A4
+window.active.title.bg.color: #316F2B
 window.active.label.bg: flat solid
 #####################################
-window.active.label.bg.color: #5C68A4
+window.active.label.bg.color: #316F2B
 #window.active.handle.bg: texture
 #window.active.grip.bg: texture
 window.inactive.title.bg: flat solid
@@ -87,7 +87,7 @@ window.inactive.button.toggled.unpressed.bg: parentrelative
 window.inactive.button.toggled.pressed.bg: parentrelative
 window.inactive.button.toggled.hover.bg: parentrelative
 
-window.label.text.justify: center 
+window.label.text.justify: left 
 
 #window.active.label.text.font: text shadow
 #window.inactive.label.text.font: text shadow
@@ -114,9 +114,9 @@ menu.items.bg: flat solid
 menu.items.bg.color: #2f343f
 menu.items.active.bg: flat solid
 ###################################
-menu.items.active.bg.color: #5C68A4
+menu.items.active.bg.color: #316F2B
 menu.title.bg: flat solid
-menu.title.bg.color: #2f343f
+menu.title.bg.color: #316F2B
 
 menu.title.text.justify: center
 

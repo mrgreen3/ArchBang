@@ -61,6 +61,8 @@
     ROOT_MOUNTPOINT="/dev/sda1"
     BOOT_MOUNTPOINT="/dev/sda"
     MNT="/mnt"
+  # MIRRORLIST
+    MIRROR=${MNT}/etc/pacman.d/mirrorlist
   #}}}
   ARCHI=$(uname -m)
   UEFI=0
@@ -303,6 +305,46 @@
     done
   }
 
+getmirror() {
+  declare -a location
+  input="${MIRROR}"
+  while IFS= read -r line
+  do
+   # do stuff
+   [[ $line =~ ^##.* ]] && location+=("${line//##}")
+
+  done < "$input"
+
+  PS3="(shift+pgup/pgdown) $prompt1"
+  echo "Select location:"
+  select LOCATION in "${location[@]}"; do
+  if contains_element "$LOCATION" "${location[@]}"; then
+        break
+      else
+        invalid_option
+      fi
+  done
+  }
+
+configure_mirrors() {
+  # Create a mirrorlist based on location, may not be fastest servers but nearest..
+  # Backup list
+  #  cp ${MIRROR} ${MNT}/etc/pacman.d/mirrorlist.backup
+
+  # Remove everything before Albania
+  sed -i '1,/^## Albania/{/^## Albania/!d}' ${MIRROR} 
+
+  OPTION=n
+  while [[ $OPTION != y ]]; do
+    getmirror
+    echo ""
+    read_input_text "Confirm Location: $LOCATION"
+  done
+
+  # magic happens here....
+  sed -i -n -r "/${LOCATION}/,/^\s*$/p" ${MIRROR}
+
+  }
 
   setlocale() { #{{{
     local _locale_list=(`cat /etc/locale.gen | grep UTF-8 | sed 's/\..*$//' | sed '/@/d' | awk '{print $1}' | uniq | sed 's/#//g'`);
@@ -1061,6 +1103,7 @@ do
         ;;
       4)
         configure_timezone
+		configure_mirrors
         checklist[4]=1
         ;;
       5)
