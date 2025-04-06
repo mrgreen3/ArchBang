@@ -15,13 +15,13 @@
     alternate-urgent-background: rgba ( 75, 81, 96, 90 % );
     active-foreground:           rgba ( 101, 172, 255, 100 % );
     lightbg:                     rgba ( 238, 232, 213, 100 % );
-    selected-active-foreground:  #316F2B;
+    selected-active-foreground:  #7B6E17;
     alternate-active-background: rgba ( 45, 48, 59, 88 % );
     background:                  rgba ( 45, 48, 59, 88 % );
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 45, 48, 59, 1 % );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  #316F2B;
+    selected-normal-background:  #7B6E17;
     border-color:                rgba ( 124, 131, 137, 100 % );
     spacing:                     2;
     separatorcolor:              rgba ( 45, 48, 59, 1 % );

@@ -517,6 +517,15 @@
 	<keybind key="W-u">
 		<action name="ToggleDecorations"/>
 	</keybind>
+    <keybind key="A-m">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="A-q">
+      <action name="Close"/>
+    </keybind>
+	<keybind key="A-u">
+		<action name="ToggleDecorations"/>
+	</keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

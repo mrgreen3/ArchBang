@@ -747,27 +747,36 @@ format_partitions(){
   done
   pause_function
 }
+
+# Function: copy with progress bar
+copy_progress() {
+    local SRC_DIR="$1"
+    local DEST_DIR="$2"
+    local BAR_WIDTH=40
+    [[ -d "$SRC_DIR" ]] || { echo "Error: Source '$SRC_DIR' missing"; return 1; }
+    local TOTAL_SIZE=$(du -sb "$SRC_DIR" | awk '{print $1}')
+    echo "Total size: $(numfmt --to=iec-i --suffix=B $TOTAL_SIZE)"
+	echo
+    #tar cf - -C "$SRC_DIR" . | pv -pterb -s "$TOTAL_SIZE" | tar xpf - -C "$DEST_DIR"
+	tar cf - -C "$SRC_DIR" . | pv -pterb -s "$TOTAL_SIZE" | tar xpf - -C "$DEST_DIR"
+    echo -e "\n✅ Copy Complete!"
+}
+
 #}}}
 #INSTALL ARCHBANG {{{
 install_archbang(){
   print_title "INSTALL ARCHBANG - www.archbang.org"
   print_info "Installing please wait..."
-  echo
   
   # copy source to new install, test copy over any changes made live to target drive
-  UPPER_DIR="/run/archiso/cowspace/persistent_ARCHBANG_*/${ARCHI}/upperdir/"
-  AIROOTFS="/run/archiso/airootfs/"
-  NOF=$(find ${AIROOTFS} -type f | wc -l)
-  rsync -a --progress $AIROOTFS $MNT/ | pv -lep -s ${NOF} > /dev/null
-# rsync -a $UPPER_DIR $MNT/ > /dev/null
+  #rsync -a --info=progress2 /run/archiso/airootfs/ "${MNT}/" 
+  copy_progress /run/archiso/airootfs/ "${MNT}/"
+
   # put live driver into new install
   cp /etc/X11/xorg.conf.d/20-gpudriver.conf ${MNT}/etc/X11/xorg.conf.d/20-gpudriver.conf &>/dev/null
 
   # Remove abinstall from target device
   rm -f ${MNT}/home/ablive/AB_Scripts/abinstall &> /dev/null
-
-  # Remove abisntall from jgmenu prepend.csv
-  sed -i '/Install/{N;d}' ${MNT}/home/ablive/.config/jgmenu/prepend.csv
 
   # Remove installer from root-menu   
   sed -i '/<!-- abinstall 5 -->/,+5d' ${MNT}/home/ablive/.config/openbox/menu.xml
@@ -795,11 +804,7 @@ install_archbang(){
 
 #CONFIGURE FSTAB {{{
 configure_fstab(){
-  if [[ $UEFI -eq 1 ]]; then
-    genfstab -t PARTUUID -p $MNT | sudo tee -a $MNT/etc/fstab
-  else
-    genfstab -U -p $MNT | sudo tee -a $MNT/etc/fstab
-  fi
+  genfstab -U "$MNT" >> "${MNT}/etc/fstab" 
 }
 #}}}
 

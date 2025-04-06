@@ -4,15 +4,15 @@
 
 # SETTINGS {{{ ---
 
-active_text_color="#EEEEEE"
-active_bg=
-active_underline="#ECB3B2"
+active_text_color="#E3E9E9"
+active_bg="#7B6E17"
+active_underline="#FFFFFF"
 
 inactive_text_color="#707880"
-inactive_bg=
-inactive_underline=
+inactive_bg="#282C34"
+inactive_underline="#FFFFFF"
 
-separator="·"
+separator="::"
 show="window_class" # options: window_title, window_class, window_classname
 forbidden_classes="Polybar Conky Gmrun"
 empty_desktop_message=""
@@ -21,7 +21,7 @@ char_limit=20
 max_windows=15
 char_case="normal" # normal, upper, lower
 add_spaces="true"
-resize_increment=16
+resize_increment=16 # sdtock 16
 wm_border_width=1 # setting this might be required for accurate resize position
 
 # --- }}}

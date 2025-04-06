@@ -6,9 +6,6 @@ p7zip
 xz
 lzop
 
-# copy to ram feature not really required but I want to test it.
-pv
-
 # Xorg
 xorg-server
 xorg-xinit
@@ -21,7 +18,7 @@ pipewire
 #pavucontrol
 pipewire-pulse
 #pragha
-vim
+#vim
 
 # Window Manager Stuff
 exo
@@ -33,8 +30,8 @@ alacritty
 archlinux-xdg-menu
 openbox
 polybar
-obconf
-lxappearance-gtk3
+#obconf
+lxappearance
 lxrandr-gtk3
 rofi
 archinstall
@@ -49,15 +46,13 @@ xdg-user-dirs
 l3afpad
 gvfs
 gsimplecal
-htop
-btop
-nvtop
-gpick
+glances
+#gpick
 
 # Gtk, Icons, Theme
 gnome-themes-extra
-arc-icon-theme
-arc-gtk-theme
+#arc-icon-theme
+#arc-gtk-theme
 awesome-terminal-fonts
 #elementary-icon-theme
 
@@ -146,7 +141,7 @@ bzip2
 coreutils
 cryptsetup
 device-mapper
-dhclient
+#dhclient
 diffutils
 e2fsprogs
 file
@@ -173,7 +168,7 @@ man-pages
 mdadm
 nano
 vi
-netctl
+#netctl
 pacman
 pciutils
 perl

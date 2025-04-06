@@ -28,17 +28,17 @@ window.client.padding.width: 0
 window.client.padding.height: 0
 window.handle.width: 0
 
-padding.width: 4
-padding.height: 4
+padding.width: 3
+padding.height: 3
 
-window.active.border.color: #2f343f
+window.active.border.color: #7B6E17
 window.inactive.border.color: #2f343f
 window.active.title.separator.color: #2f343f
 window.inactive.title.separator.color: #2f343f
 window.active.client.color: #2f343f
 window.inactive.client.color: #2f343f
 
-window.active.label.text.color: #D3DAE3
+window.active.label.text.color: #E3E9E9
 window.inactive.label.text.color: #7F8388
 
 window.active.button.unpressed.image.color: #D3DAE3
@@ -59,10 +59,10 @@ window.inactive.button.toggled.hover.image.color: #afb8c5
 window.active.title.bg: flat solid
 
 #####################################
-window.active.title.bg.color: #316F2B
+window.active.title.bg.color: #7B6E17
 window.active.label.bg: flat solid
 #####################################
-window.active.label.bg.color: #316F2B
+window.active.label.bg.color: #7B6E17
 #window.active.handle.bg: texture
 #window.active.grip.bg: texture
 window.inactive.title.bg: flat solid
@@ -93,7 +93,7 @@ window.label.text.justify: left
 #window.inactive.label.text.font: text shadow
 
 ### MENU
-menu.border.width: 4
+menu.border.width: 0
 menu.separator.width: 1
 menu.separator.padding.width: 10
 menu.separator.padding.height: 2
@@ -101,22 +101,22 @@ menu.separator.padding.height: 2
 menu.overlap.x: -4
 menu.overlap.y: 0
 
-menu.border.color: #2f343f
+menu.border.color: #7B6E17
 menu.separator.color: #2f343f
 
 menu.title.text.color: #ffffff
 menu.items.text.color: #a8adb5
 menu.items.disabled.text.color: #76797F
-menu.items.active.text.color: #dddddd
+menu.items.active.text.color: #E3E9E9
 menu.items.active.disabled.text.color: #aeb0b6
 
 menu.items.bg: flat solid
 menu.items.bg.color: #2f343f
 menu.items.active.bg: flat solid
 ###################################
-menu.items.active.bg.color: #316F2B
+menu.items.active.bg.color: #7B6E17
 menu.title.bg: flat solid
-menu.title.bg.color: #316F2B
+menu.title.bg.color: #7B6E17
 
 menu.title.text.justify: center
 

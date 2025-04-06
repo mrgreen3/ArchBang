@@ -5,13 +5,13 @@
 [global]
   width = 150
   origin = top-right
-  offset = (10,10)
-  font = Dejavu Sans 8
+  offset = (15,40)
+  font = Dejavu Sans 10
   format = "%s"
-  frame_color = "#316F2B"  
+  frame_color = "#0E1005"
   frame_width = 2
-  background = "#1E1E1E"  
-  foreground = "#FFFFFF" 
+  background = "#7B6E17"  
+  foreground = "#E3E9E9" 
   padding = 5
   horizontal_padding = 5
   alignment = center
