@@ -43,6 +43,11 @@ chown ablive /home/ablive
 # Link for xterm to allow htop to work in xdg_menu
 ln -s /usr/bin/alacritty /usr/bin/xterm
 
+# Edit a .desktop file so it does not show in Openbox menu
+for app in bssh bvnc qv4l2 qvidcap avahi-discover conky gparted; do
+	echo "Hidden=true" >> /usr/share/applications/$app.desktop
+done
+
 # Start required systemd services
 systemctl enable {pacman-init,NetworkManager}.service -f
 
@@ -52,6 +57,3 @@ systemctl set-default graphical.target
 # Revert from archiso preset to default preset
 cp -rf "/usr/share/mkinitcpio/hook.preset" "/etc/mkinitcpio.d/linux.preset"
 sed -i 's?%PKGBASE%?linux?' "/etc/mkinitcpio.d/linux.preset"
-
-# Copy custom profile into Archinstall desktops folder
-cp /etc/skel/.config/archinstall/ArchBang.py /usr/lib/python3.*/site-packages/archinstall/default_profiles/desktops

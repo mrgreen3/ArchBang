@@ -40,9 +40,9 @@
       <command>lxappearance</command>
     </action>
   </item>
-  <item label="Keybinds">
+  <item label="GParted">
     <action name="Execute">
-      <command>l3afpad ~/Documents/keybinds</command>
+		<command>sudo gparted</command>
     </action>
   </item>
 <item label="Sysinfo">
@@ -78,8 +78,10 @@
       <command>systemctl poweroff</command>
     </action>
  </item>
-
 </menu>    
+
+</menu>
+ 
 </openbox_menu>
 
 

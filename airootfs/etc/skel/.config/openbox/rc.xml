@@ -179,7 +179,17 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
 	<!-- Keybinds for ArchBang -->
-	<keybind key="W-t">
+	<keybind key="W-a">
+		<action name="ShowMenu">
+          <menu>client-list-combined-menu</menu>
+        </action>
+	</keybind>
+	<keybind key="A-a">
+		<action name="ShowMenu">
+          <menu>client-list-combined-menu</menu>
+        </action>
+	</keybind>
+    <keybind key="W-t">
       <action name="execute">
 	  <command>alacritty</command>
       </action>
@@ -203,21 +213,29 @@
       </action>
     </keybind>
 	
-	<keybind key="W-d">
+	<keybind key="W-r">
       <action name="execute">
 	  <command>rofi -show drun</command>
       </action>
     </keybind>
-	
-	<keybind key="W-h">
+
+	<keybind key="W-d">
       <action name="execute">
-	  <command>l3afpad ~/Documents/keybinds</command>
+	  <command>dmenu_run -b -p "Run: " -nb '#0e0f06' -nf '#c0c8b7' -sf '#0e0f06' -sb '#9d8d31' -fn 'Sans-10'</command>
+      </action>
+     </keybind>
+	 <!-- Added Shift as it clashes with an Openbox keybind-->
+	<keybind key="A-S-d">
+      <action name="execute">
+	  <command>dmenu_run -b -p "Run: " -nb '#0e0f06' -nf '#c0c8b7' -sf '#0e0f06' -sb '#9d8d31' -fn 'Sans-10'</command>
       </action>
     </keybind>
+	
+
 
 	<keybind key="W-g">
       <action name="execute">
-	  <command>l3afpad ~/Ducuments/guide</command>
+		  <command>l3afpad ~/Documents/Guide</command>
       </action>
     </keybind>
 	
@@ -269,21 +287,15 @@
       </action>
     </keybind>
 	
-	<keybind key="A-d">
+	<keybind key="A-r">
       <action name="execute">
 	  <command>rofi -show drun</command>
       </action>
     </keybind>
 	
-	<keybind key="A-h">
-      <action name="execute">
-	  <command>l3afpad ~/Documents/keybinds</command>
-      </action>
-    </keybind>
-
 	<keybind key="A-g">
       <action name="execute">
-	  <command>l3afpad ~/Ducuments/guide</command>
+	  <command>l3afpad ~/Documents/Guide</command>
       </action>
     </keybind>
 	
@@ -415,7 +427,7 @@
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <keybind key="A-S-space">
+	<keybind key="A-S-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
       </action>

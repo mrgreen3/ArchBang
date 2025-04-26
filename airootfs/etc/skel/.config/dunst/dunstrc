@@ -8,10 +8,10 @@
   offset = (15,40)
   font = Dejavu Sans 10
   format = "%s"
-  frame_color = "#0E1005"
+  frame_color = "#9D8D31"
   frame_width = 2
-  background = "#7B6E17"  
-  foreground = "#E3E9E9" 
+  background = "#9D8D31"  
+  foreground = "#0E0F06" 
   padding = 5
   horizontal_padding = 5
   alignment = center

@@ -1,9 +1,9 @@
-general.import = ["~/.config/alacritty/themes/catppuccin_mocha.toml",]
+general.import = ["~/.config/alacritty/themes/colors-alacritty.toml",]
 
 general.ipc_socket = true
 
 [font]
-size = 8
+size = 9
 
 [font.bold]
 family = "monospace"

@@ -31,10 +31,11 @@ archlinux-xdg-menu
 openbox
 polybar
 #obconf
+conky
 lxappearance
 lxrandr-gtk3
 rofi
-archinstall
+dmenu
 dunst
 wmctrl
 slop
@@ -48,6 +49,10 @@ gvfs
 gsimplecal
 glances
 #gpick
+
+# i3 window manager
+i3-wm
+i3status
 
 # Gtk, Icons, Theme
 gnome-themes-extra

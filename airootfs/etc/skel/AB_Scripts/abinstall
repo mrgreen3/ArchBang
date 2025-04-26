@@ -781,6 +781,9 @@ install_archbang(){
   # Remove installer from root-menu   
   sed -i '/<!-- abinstall 5 -->/,+5d' ${MNT}/home/ablive/.config/openbox/menu.xml
 
+  # Remove Gparted from root-menu
+  sed -i '/GParted/,+4d' ${MNT}/home/ablive/.config/openbox/menu.xml
+
   # remove autologin from install
   rm -r ${MNT}/etc/systemd/system/getty@tty1.service.d &>/dev/null
 

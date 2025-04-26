@@ -1,37 +1,34 @@
 /*******************************************************
- * ROFI Arch Dark Transparent colors for EndeavourOS
- * Maintainer: joekamprad [joekamprad //a_t// endeavouros.com]
+ * ROFI ArchBang Colours made via pyal16 (https://pyal16.github.io/)
  *******************************************************/
 /* Modified for ArcHBang by Mr Green [mrgreen@archbang.org] */
 * {
-    selected-normal-foreground:  #EEEEEE;
-    foreground:                  rgba ( 196, 203, 212, 100 % );
-    normal-foreground:           @foreground;
-    alternate-normal-background: rgba ( 45, 48, 59, 1 % );
-    red:                         rgba ( 220, 50, 47, 100 % );
-    selected-urgent-foreground:  rgba ( 249, 249, 249, 100 % );
-    blue:                        rgba ( 38, 139, 210, 100 % );
-    urgent-foreground:           rgba ( 204, 102, 102, 100 % );
-    alternate-urgent-background: rgba ( 75, 81, 96, 90 % );
-    active-foreground:           rgba ( 101, 172, 255, 100 % );
-    lightbg:                     rgba ( 238, 232, 213, 100 % );
-    selected-active-foreground:  #7B6E17;
-    alternate-active-background: rgba ( 45, 48, 59, 88 % );
-    background:                  rgba ( 45, 48, 59, 88 % );
+    active-background: #9D8D31;
+    active-foreground: @foreground;
+    normal-background: @background;
+    normal-foreground: @foreground;
+    urgent-background: #79866E;
+    urgent-foreground: @foreground;
+
+    alternate-active-background: @background;
+    alternate-active-foreground: @foreground;
+    alternate-normal-background: @background;
     alternate-normal-foreground: @foreground;
-    normal-background:           rgba ( 45, 48, 59, 1 % );
-    lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  #7B6E17;
-    border-color:                rgba ( 124, 131, 137, 100 % );
-    spacing:                     2;
-    separatorcolor:              rgba ( 45, 48, 59, 1 % );
-    urgent-background:           rgba ( 45, 48, 59, 15 % );
-    selected-urgent-background:  rgba ( 165, 66, 66, 100 % );
-    alternate-urgent-foreground: @urgent-foreground;
-    background-color:            rgba ( 0, 0, 0, 0 % );
-    alternate-active-foreground: @active-foreground;
-    active-background:           rgba ( 29, 31, 33, 17 % );
-    selected-active-background:  rgba ( 26, 28, 35, 100 % );
+    alternate-urgent-background: @background;
+    alternate-urgent-foreground: @foreground;
+
+    selected-active-background: #79866E;
+    selected-active-foreground: @foreground;
+    selected-normal-background: #9D8D31;
+    selected-normal-foreground: @foreground;
+    selected-urgent-background: #939065;
+    selected-urgent-foreground: @foreground;
+
+    background-color: @background;
+    background: #0e0f06;
+    foreground: #c2c3c0;
+    border-color: @background;
+    spacing: 2;
 }
 
 window {
@@ -49,7 +46,7 @@ mainbox {
 }
 message {
     border:       2px 0px 0px;
-    border-color: @separatorcolor;
+    border-color: @background;
     padding:      1px;
 }
 textbox {
@@ -58,7 +55,7 @@ textbox {
 listview {
     fixed-height: 0;
     border:       8px 0px 0px;
-    border-color: @separatorcolor;
+    border-color: @background;
     spacing:      8px;
     scrollbar:    true;
     padding:      2px 0px 0px;
@@ -116,7 +113,7 @@ scrollbar {
 }
 mode-switcher {
     border:       2px 0px 0px;
-    border-color: @separatorcolor;
+    border-color: @background;
 }
 button {
     spacing:    0;
