@@ -1,71 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ArchBang Guide</title>
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #111;
+      color: #00ff00;
+      padding: 2em;
+      line-height: 1.5;
+    }
+    pre, code {
+      background-color: #222;
+      padding: 0.5em;
+      display: block;
+      overflow-x: auto;
+    }
+    a {
+      color: #00ffff;
+    }
+    h1, h2, h3 {
+      color: #66ff66;
+    }
+  </style>
+</head>
+<body>
+<pre>
 
-Welcome to ArchBang Live a live iso [www.archbang.org/Guide].
+# ArchBang Live Guide
 
-Information here is as up to date as possible.
+Welcome to **ArchBang Live**, a lightweight Arch-based live ISO.  
+Visit: [www.archbang.org/Guide](http://www.archbang.org/Guide)
 
-**Please do not post issues or problems related to ArchBang on Archlinux forums it will result in at best your thread closed or worse deleted.**
+> **Note:**  
+> Please **do not** post issues or problems related to ArchBang on the Arch Linux forums.  
+> At best, your thread will be closed; at worst, it will be deleted.
 
-====Openbox Window Manager====
+---
 
-Will give a brief overview of ArchBang version.
+## Pacman (Live Session)
 
-Some useful keybinds are:
+To use `pacman` or a browser in the live session, you need a working network connection.
 
-Alt + h for ArchBang key binds
+- **Wired (Ethernet)** connections work automatically.
+- **Wireless** connections can be configured via the network icon on the panel:
+  - Left-click the icon
+  - Select your network from the list
+  - Enter your Wi-Fi password
 
-Super + t --- Alacritty Terminal
-Super + w --- Web Browser
-Super + f --- File Manager
+> 💡 If you connect to Wi-Fi **before** running the installer, the connection will be carried over to the installed system.
 
-Key binds above will also work with Alt key.
+---
 
-Super + [1-4] --- Switch to Dekstop [1-4]
-Super + Shift + [1-4] --- Move Active window to Desktop [1-4]
-Super + q --- Closes a selcted window
+## Installation Tips and Tricks
 
-Right Click on desktop for Main Menu
+If your live session runs out of disk space, you can remount the live filesystem with more space:
 
-You will also see launchers on panel for Menu, Browser, Terminal and File Manager, as well as workspaces, system tray, volume control and clock.
+```bash
+sudo mount -o remount,size=8G /run/archiso/cowspace
+```
 
+---
 
-====Installation====
+## Installation
 
-To run installer select Install in main menu.
+To begin installation:
 
-The installer is menu driven and very easy to follow. 
+1. Right-click on the desktop  
+2. Select **Install** from the main menu
 
-Should you need an easier way to set up partitions and filesystems then Gparted is included live. [sudo gparted in a terminal]
+The installer is menu-driven and easy to follow.
 
-===Post Install===
+> Need help with partitions?  
+> Use **GParted**, available via the Openbox menu under **Settings**.
 
-Pacman will not work until you do the following in a terminal:
+---
 
+## Post-Install Steps
+
+### 🧠 Microcode Notice
+
+ArchBang includes **both** `intel-ucode` and `amd-ucode` microcode packages to support a wide range of CPUs.
+
+You only need **one**, depending on your processor.
+
+> ⚠️ **Important:**  
+> If you remove a microcode package **after installation**, and your bootloader references it, your system **may fail to boot**.  
+> Only remove the unused one if you are comfortable editing your bootloader entries.
+
+> 💡 After removal, update your bootloader configuration to reflect the change (e.g., regenerate GRUB or edit `loader.conf` if using systemd-boot).
+
+---
+
+### Ensure You Have a Network Connection
+
+Refer to the instructions in the **Pacman Live** section above if needed.
+
+### Initialize Pacman
+
+`pacman` will not work until keys are initialized. Run the following:
+
+```bash
 sudo pacman-key --init
 sudo pacman-key --populate
-sudo pacman -Sy --needed archlinux-keyring && sudo pacman -Su
+sudo pacman -Sy --needed archlinux-keyring
+sudo pacman -Su
+```
 
-This will create keys, refresh package cache and update archlinux-keyring.
+This will:
 
-Then you can search for a package of choice using:
+- Create keys  
+- Refresh the package cache  
+- Update the `archlinux-keyring`
 
-sudo pacman -Ss
+---
 
-Install a pacakge using
+### Basic Package Usage
 
-sudo pacman -S
+Search for packages:
 
+```bash
+sudo pacman -Ss <package-name>
+```
 
-For more help, guides search the Arch Wiki [https://wiki.archlinux.org/]
+Install a package:
 
-====Tips and tricks?====
+```bash
+sudo pacman -S <package-name>
+```
 
-If your drive space fills up live then run the following to double size of storage.
+---
 
-sudo mount -o remount,size=8G /run/archiso/cowspace
+## Need Help?
 
-By default pacman mirrorlist is un-commented to allow it to work live, read Arch wiki guide on mirrors and setting them up here:
+Check out the Arch Wiki:  
+👉 [https://wiki.archlinux.org](https://wiki.archlinux.org)
 
-https://wiki.archlinux.org/title/Mirrors
+---
 
-© 2025 ArchBang Live Iso
+✍️ **ArchBang is maintained by a single developer in their spare time.**  
+If you find it useful and would like to support its continued development:  
+☕ [Buy me a coffee](https://ko-fi.com/archbang)
 
+Thank you for using ArchBang.
+
+© 2025 ArchBang Live ISO
+
+</pre>
+</body>
+</html>

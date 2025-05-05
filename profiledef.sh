@@ -4,7 +4,7 @@
 # by Mr Green [mrgreen@archbang.org]
 
 iso_name="archbang"
-iso_label="ARCHBANG_$(date +%d%m)"
+iso_label="ARCHBANG_$(date +%m%d)"
 iso_publisher="ArchBang Linux <https://www.archbang.org>"
 iso_application="ArchBang Linux Live/Rescue Iso"
 iso_version="$(date +%d%m)"

@@ -136,7 +136,7 @@ osd.label.bg: flat solid
 osd.label.bg.color: #2f343f
 osd.hilight.bg: flat solid
 #############################
-osd.hilight.bg.color: #5C68A4
+osd.hilight.bg.color: #9D8D31
 osd.unhilight.bg: flat solid
 osd.unhilight.bg.color: #000000
 

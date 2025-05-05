@@ -27,7 +27,7 @@
 <!-- abinstall 5 -->
 <item label="Install">
    <action name="Execute">
-      <command>alacritty -e sudo ~/AB_Scripts/abinstall</command>
+      <command>alacritty --title "ArchBang-Installer" -e sudo ~/AB_Scripts/abinstall</command>
    </action>
 </item>
 <separator />
@@ -45,9 +45,9 @@
 		<command>sudo gparted</command>
     </action>
   </item>
-<item label="Sysinfo">
+<item label="System">
     <action name="Execute">
-      <command>alacritty -e glances</command>
+      <command>alacritty --title "System-Information" -e glances</command>
     </action>
   </item>
  <item label="Panel">

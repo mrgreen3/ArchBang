@@ -1,15 +1,15 @@
 ## Archive Tools
 zip
 unzip
-unrar
+#unrar
 p7zip
 xz
-lzop
+#lzop
 
 # Xorg
 xorg-server
 xorg-xinit
-xorg-xkill
+#xorg-xkill
 ttf-dejavu
 xorg-xrdb
 
@@ -19,20 +19,22 @@ pipewire
 pipewire-pulse
 #pragha
 #vim
+sof-firmware
+ttyd
 
 # Window Manager Stuff
 exo
 garcon
 thunar
 thunar-volman
-tumbler
+#tumbler
 alacritty
 archlinux-xdg-menu
 openbox
 polybar
 #obconf
 conky
-lxappearance
+lxappearance-gtk3
 lxrandr-gtk3
 rofi
 dmenu
@@ -48,7 +50,6 @@ l3afpad
 gvfs
 gsimplecal
 glances
-#gpick
 
 # i3 window manager
 i3-wm

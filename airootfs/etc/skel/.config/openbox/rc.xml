@@ -235,7 +235,7 @@
 
 	<keybind key="W-g">
       <action name="execute">
-		  <command>l3afpad ~/Documents/Guide</command>
+		  <command>firefox ~/Documents/Guide</command>
       </action>
     </keybind>
 	
@@ -295,7 +295,7 @@
 	
 	<keybind key="A-g">
       <action name="execute">
-	  <command>l3afpad ~/Documents/Guide</command>
+	  <command>firefox ~/Documents/Guide</command>
       </action>
     </keybind>
 	
@@ -896,6 +896,12 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
+
+
+
+  <application title="ArchBang-Installer">
+  <maximized>yes</maximized>
+  </application>
 
     <!--
   # this is an example with comments through out. use these to make your
