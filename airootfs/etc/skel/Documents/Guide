@@ -49,8 +49,6 @@ To use `pacman` or a browser in the live session, you need a working network con
   - Select your network from the list
   - Enter your Wi-Fi password
 
-> 💡 If you connect to Wi-Fi **before** running the installer, the connection will be carried over to the installed system.
-
 ---
 
 ## Installation Tips and Tricks
@@ -101,11 +99,9 @@ Refer to the instructions in the **Pacman Live** section above if needed.
 
 `pacman` will not work until keys are initialized. Run the following:
 
-```bash
-sudo pacman-key --init
-sudo pacman-key --populate
-sudo pacman -Sy --needed archlinux-keyring
-sudo pacman -Su
+```
+ab-pacman-keys
+
 ```
 
 This will:

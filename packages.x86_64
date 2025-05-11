@@ -21,6 +21,7 @@ pipewire-pulse
 #vim
 sof-firmware
 ttyd
+dysk
 
 # Window Manager Stuff
 exo

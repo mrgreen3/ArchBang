@@ -771,6 +771,8 @@ install_archbang(){
   # copy source to new install, test copy over any changes made live to target drive
   #rsync -a --info=progress2 /run/archiso/airootfs/ "${MNT}/" 
   copy_progress /run/archiso/airootfs/ "${MNT}/"
+  # need to add arch_chroot path and test! for unique machine id
+  arch-chroot ${MNT} systemd-machine-id-setup
 
   # put live driver into new install
   cp /etc/X11/xorg.conf.d/20-gpudriver.conf ${MNT}/etc/X11/xorg.conf.d/20-gpudriver.conf &>/dev/null
