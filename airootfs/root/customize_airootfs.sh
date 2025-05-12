@@ -40,9 +40,6 @@ ln -sf /usr/share/zoneinfo/Canada/Montreal /etc/localtime
 useradd -m -p "" -G "wheel" -s /bin/bash -g users ablive
 chown ablive /home/ablive
 
-# Link for xterm to allow htop to work in xdg_menu
-ln -s /usr/bin/alacritty /usr/bin/xterm
-
 # Edit a .desktop file so it does not show in Openbox menu
 for app in bssh bvnc qv4l2 qvidcap avahi-discover conky gparted; do
 	echo "Hidden=true" >> /usr/share/applications/$app.desktop

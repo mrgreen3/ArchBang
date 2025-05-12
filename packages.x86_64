@@ -18,10 +18,8 @@ pipewire
 #pavucontrol
 pipewire-pulse
 #pragha
-#vim
+vim
 sof-firmware
-ttyd
-dysk
 
 # Window Manager Stuff
 exo
@@ -33,7 +31,6 @@ alacritty
 archlinux-xdg-menu
 openbox
 polybar
-#obconf
 conky
 lxappearance-gtk3
 lxrandr-gtk3
