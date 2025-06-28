@@ -1,4 +1,4 @@
-general.import = ["~/.config/alacritty/themes/colors-alacritty.toml",]
+general.import = ["~/.config/alacritty/themes/everforest_dark.toml",]
 
 general.ipc_socket = true
 

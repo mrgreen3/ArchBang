@@ -9,24 +9,19 @@ xz
 # Xorg
 xorg-server
 xorg-xinit
-#xorg-xkill
 ttf-dejavu
 xorg-xrdb
 
 # Sound
 pipewire
-#pavucontrol
 pipewire-pulse
-#pragha
 vim
-sof-firmware
 
 # Window Manager Stuff
 exo
 garcon
 thunar
 thunar-volman
-#tumbler
 alacritty
 archlinux-xdg-menu
 openbox
@@ -37,8 +32,8 @@ lxrandr-gtk3
 rofi
 dmenu
 dunst
-wmctrl
-slop
+#wmctrl
+#slop
 udisks2
 xdotool
 cbatticon
@@ -46,7 +41,7 @@ laptop-detect
 xdg-user-dirs
 l3afpad
 gvfs
-gsimplecal
+#gsimplecal
 glances
 
 # i3 window manager

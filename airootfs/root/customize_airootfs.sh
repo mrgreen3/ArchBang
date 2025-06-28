@@ -36,6 +36,37 @@ hwclock --systohc --utc
 # Timezone
 ln -sf /usr/share/zoneinfo/Canada/Montreal /etc/localtime
 
+# ─────────────────────────────────────────────────────────────
+# ArchBang: Audio Service Autostart Setup
+# Created by Present Me for Future Me — because sound matters.
+# Enables PipeWire and related services for all new users by
+# placing symlinks in /etc/skel.
+# Most triumphant audio setup ahead. 🤘
+# ─────────────────────────────────────────────────────────────
+
+# Target directory where systemd user service symlinks will be created
+TARGET_DIR="/etc/skel/.config/systemd/user/default.target.wants"
+
+# Source directory for official systemd user service files
+UNIT_SRC="/usr/lib/systemd/user"
+
+# List of user services to be auto-enabled at login
+SERVICES=(
+  "wireplumber.service"
+  "pipewire.service"
+  "pipewire-pulse.service"
+)
+
+# Create target directory if it doesn't exist
+mkdir -p "$TARGET_DIR"
+
+# Loop through the list and create symlinks for each service
+for service in "${SERVICES[@]}"; do
+  ln -sf "$UNIT_SRC/$service" "$TARGET_DIR/$service"
+done
+
+# Be excellent to each other... and to your ~/.config 🎸
+
 # Add live user
 useradd -m -p "" -G "wheel" -s /bin/bash -g users ablive
 chown ablive /home/ablive

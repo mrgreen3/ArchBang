@@ -3,7 +3,7 @@
  *******************************************************/
 /* Modified for ArcHBang by Mr Green [mrgreen@archbang.org] */
 * {
-    active-background: #9D8D31;
+    active-background: #649B4B;
     active-foreground: @foreground;
     normal-background: @background;
     normal-foreground: @foreground;
@@ -17,16 +17,16 @@
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: #79866E;
+    selected-active-background: #466C34;
     selected-active-foreground: @foreground;
-    selected-normal-background: #9D8D31;
+    selected-normal-background: #466C34;
     selected-normal-foreground: @foreground;
     selected-urgent-background: #939065;
     selected-urgent-foreground: @foreground;
 
     background-color: @background;
-    background: #0e0f06;
-    foreground: #c2c3c0;
+    background: #26230D;
+    foreground: #ffffff;
     border-color: @background;
     spacing: 2;
 }

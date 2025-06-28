@@ -1,5 +1,13 @@
-NAME=ArchBang
-ID=arch
-PRETTY_NAME=ArchBang
+NAME="ArchBang"
+PRETTY_NAME="ArchBang Linux"
+ID=archbang
+ID_LIKE=arch
+# ArchBang is rolling-release, so we don’t set VERSION_ID.
+# If you prefer a date tag (e.g. ISO build), uncomment & set it:
+# VERSION_ID="2025.06"
+BUILD_ID=rolling
+
 ANSI_COLOR="0;32"
-HOME_URL='https://archbang.org'
+HOME_URL="https://archbang.org/"
+DOCUMENTATION_URL="https://archbang.org/guides"
+SUPPORT_URL="https://archbang.org/contact"

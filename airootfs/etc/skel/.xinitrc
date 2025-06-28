@@ -11,6 +11,8 @@ fi
 # create user directories
 /usr/bin/xdg-user-dirs-update
 
-# Start Openbox
-exec openbox-session 
+# Start Window Manager based on boot cheat code wm=i3
+[ "$(grep -o 'wm=i3' /proc/cmdline)" ] && WM=i3 || WM=openbox-session
+exec $WM
+
 
