@@ -221,13 +221,13 @@
 
 	<keybind key="W-S-d">
       <action name="execute">
-	  <command>dmenu_run -p "Run: " -nb '#0e0f06' -nf '#c0c8b7' -sf '#0e0f06' -sb '#466C34' -fn 'Sans-10'</command>
+	  <command>dmenu_run -p "Run: " -nb '#0e0f06' -nf '#c0c8b7' -sf '#0e0f06' -sb '#226030' -fn 'Sans-10'</command>
       </action>
      </keybind>
 	 <!-- Added Shift as it clashes with an Openbox keybind-->
 	<keybind key="A-S-d">
       <action name="execute">
-	  <command>dmenu_run -p "Run: " -nb '#0e0f06' -nf '#c0c8b7' -sf '#0e0f06' -sb '#466C34' -fn 'Sans-10'</command>
+	  <command>dmenu_run -p "Run: " -nb '#0e0f06' -nf '#c0c8b7' -sf '#0e0f06' -sb '#226030' -fn 'Sans-10'</command>
       </action>
     </keybind>
 	

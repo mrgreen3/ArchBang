@@ -3,7 +3,7 @@
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
 <menu id="root-menu" label="Openbox 3">
-<separator label="ArchBang" />
+<separator label="ArchBANG" />
 <item label="Terminal">
    <action name="Execute">
       <command>alacritty</command>

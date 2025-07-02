@@ -8,7 +8,7 @@
 #xrandr -s 1920x1080 &
 
 # Apply background image..
-feh --bg-scale ~/Backgrounds/allium.jpg
+feh --bg-scale ~/Backgrounds/indygreen.png
 
 # Battery/AC applet
 cbatticon -n &

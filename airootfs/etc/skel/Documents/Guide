@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ArchBang Guide</title>
+  <title>GreenBANG Guide</title>
   <style>
     body {
       font-family: monospace;
@@ -28,13 +28,13 @@
 <body>
 <pre>
 
-# ArchBang Live Guide
+# GreenBANG Project Guide
 
-Welcome to **ArchBang Live**, a lightweight Arch-based live ISO.  
+Welcome to **GreenBANG Project**, a lightweight Arch-based live ISO.  
 Visit: [www.archbang.org/Guide](http://www.archbang.org/Guide)
 
 > **Note:**  
-> Please **do not** post issues or problems related to ArchBang on the Arch Linux forums.  
+> Please **do not** post issues or problems related to GreenBANG on the Arch Linux forums.  
 > At best, your thread will be closed; at worst, it will be deleted.
 
 ---
@@ -79,7 +79,7 @@ The installer is menu-driven and easy to follow.
 
 ### 🧠 Microcode Notice
 
-ArchBang includes **both** `intel-ucode` and `amd-ucode` microcode packages to support a wide range of CPUs.
+GreenBANG includes **both** `intel-ucode` and `amd-ucode` microcode packages to support a wide range of CPUs.
 
 You only need **one**, depending on your processor.
 
@@ -135,13 +135,13 @@ Check out the Arch Wiki:
 
 ---
 
-✍️ **ArchBang is maintained by a single developer in their spare time.**  
+✍️ **GreenBANG is maintained by a single developer in their spare time.**  
 If you find it useful and would like to support its continued development:  
 ☕ [Buy me a coffee](https://ko-fi.com/archbang)
 
-Thank you for using ArchBang.
+Thank you for using GreenBANG.
 
-© 2025 ArchBang Live ISO
+© 2025 GreenBANG Project ISO
 
 </pre>
 </body>

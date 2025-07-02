@@ -1,0 +1,210 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+; modified bar for ArchBang by Mr Green [mrgreen@archbang.org]
+
+[colors]
+background = #d90e0f06
+background-alt = #666956
+foreground = #c2c3c0
+foreground-alt = #0e0f06
+; main colour change
+primary =  #226030
+secondary = #79866E
+alert = #939065
+disabled = #c2c3c0
+
+[bar/archbang]
+width = 100%
+height = 22pt
+radius = 0
+bottom = true 
+; dpi = 96
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0pt
+
+border-size = 3pt
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin = 1
+
+separator = 
+separator-foreground = ${colors.background}
+
+font-0 = Noto Sans:size=11;3
+font-1 = FontAwesome:style=Regular;3
+
+modules-left =  workspaces rofi browser terminal file 
+modules-center = xwindow 
+modules-right = date pulseaudio systray
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#enable-ipc = true
+
+; wm-restack = generic
+; wm-restack = bspwm
+; wm-restack = i3
+
+; override-redirect = true
+
+; This module is not active by default (to enable it, add it to one of the
+; modules-* list above).
+; Please note that only a single tray can exist at any time. If you launch
+; multiple bars with this module, only a single one will show it, the others
+; will produce a warning. Which bar gets the module is timing dependent and can
+; be quite random.
+; For more information, see the documentation page for this module:
+; https://polybar.readthedocs.io/en/stable/user/modules/tray.html
+[module/systray]
+type = internal/tray
+; change colour
+tray-foreground = #362D70
+
+format-margin =2pt
+tray-spacing = 2pt
+
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false 
+format = <label-state>
+label-active = %name%
+label-active-background = ${colors.primary}
+label-active-foreground = ${colors.foreground}
+label-active-underline= ${colors.primary}
+label-active-padding = 2
+
+label-occupied = %name%
+label-occupied-padding = 2
+
+label-urgent = %name%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %name%
+label-empty-foreground = ${colors.disabled}
+label-empty-padding = 2
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:60:...%
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#F0C674}%mountpoint%%{F-} %percentage_used%%
+
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.disabled}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume-prefix = " "
+format-volume-prefix-foreground = ${colors.foreground}
+format-volume = <label-volume>
+
+label-volume = %percentage%%
+
+; label-muted = muted
+label-muted = "%{T1}%{T-} muted"
+label-muted-foreground = ${colors.disabled}
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+label-layout = %layout%
+label-layout-foreground = ${colors.foreground}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-foreground = ${colors.background}
+label-indicator-background = ${colors.secondary}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "  "
+format-prefix-foreground = ${colors.primary}
+label = %percentage_used:2%%
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %percentage:2%%
+
+[module/date]
+type      = internal/date
+interval  = 1
+
+date      = %H:%M
+date-alt  = %d-%m-%Y %H:%M
+click-left = gsimplecal
+
+format            = <label>
+format-background = #004488      ; deep blue, 100 % opaque
+
+label             = %date%
+label-foreground  = ${colors.foreground}
+
+[module/browser]
+type = custom/script
+exec = echo "%{F#CC5500}%{F-}"
+click-left = firefox 
+interval = 5
+
+[module/file]
+type = custom/script
+exec = echo "%{F#0077CC}%{F-}"
+click-left = thunar
+interval = 5
+
+[module/terminal]
+type = custom/script
+exec = echo "%{F#CCBAC1}%{F-}"
+click-left = alacritty
+click-right = setxkbmap gb; notify-send "Keyboard layout changed to GB"
+interval = 5
+
+[module/rofi]
+type = custom/script
+exec = echo "%{F#95A262}%{F-}"  ; Rocket icon from Font Awesome
+click-left = rofi -show drun 
+click-right= 
+interval = 0
+label-font = 1  ; Ensure this matches your Font Awesome font index
+label-padding = 0
+
+[settings]
+screenchange-reload = true
+pseudo-transparency = true
+
+; vim:ft=dosini
+

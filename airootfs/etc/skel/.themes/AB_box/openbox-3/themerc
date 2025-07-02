@@ -31,17 +31,17 @@ window.handle.width: 0
 padding.width: 3
 padding.height: 3
 
-window.active.border.color: #466C34
+window.active.border.color: #226030
 window.inactive.border.color: #2f343f
 window.active.title.separator.color: #2f343f
 window.inactive.title.separator.color: #2f343f
 window.active.client.color: #2f343f
 window.inactive.client.color: #2f343f
 
-window.active.label.text.color: #000000
+window.active.label.text.color: #C2C3C0
 window.inactive.label.text.color: #7F8388
 
-window.active.button.unpressed.image.color: #26230D
+window.active.button.unpressed.image.color: #C2C3C0
 window.active.button.pressed.image.color: #40e0d0
 window.active.button.disabled.image.color: #2f343f
 window.active.button.hover.image.color: #afb8c5
@@ -59,10 +59,10 @@ window.inactive.button.toggled.hover.image.color: #afb8c5
 window.active.title.bg: flat solid
 
 #####################################
-window.active.title.bg.color: #466C34
+window.active.title.bg.color: #226030
 window.active.label.bg: flat solid
 #####################################
-window.active.label.bg.color: #466C34
+window.active.label.bg.color: #226030
 #window.active.handle.bg: texture
 #window.active.grip.bg: texture
 window.inactive.title.bg: flat solid
@@ -104,19 +104,19 @@ menu.overlap.y: 0
 menu.border.color: #2f343f
 menu.separator.color: #2f343f
 
-menu.title.text.color: #000000
+menu.title.text.color: #C2C3C0
 menu.items.text.color: #a8adb5
 menu.items.disabled.text.color: #76797F
-menu.items.active.text.color: #000000
+menu.items.active.text.color: #C2C3C0
 menu.items.active.disabled.text.color: #aeb0b6
 
 menu.items.bg: flat solid
 menu.items.bg.color: #000000
 menu.items.active.bg: flat solid
 ###################################
-menu.items.active.bg.color: #466C34
+menu.items.active.bg.color: #226030
 menu.title.bg: flat solid
-menu.title.bg.color: #466C34
+menu.title.bg.color: #226030
 
 menu.title.text.justify: center
 
@@ -136,7 +136,7 @@ osd.label.bg: flat solid
 osd.label.bg.color: #2f343f
 osd.hilight.bg: flat solid
 #############################
-osd.hilight.bg.color: #466C34
+osd.hilight.bg.color: #226030
 osd.unhilight.bg: flat solid
 osd.unhilight.bg.color: #000000
 

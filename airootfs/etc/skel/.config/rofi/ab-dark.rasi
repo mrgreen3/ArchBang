@@ -17,15 +17,15 @@
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: #466C34;
+    selected-active-background: #226030;
     selected-active-foreground: @foreground;
-    selected-normal-background: #466C34;
+    selected-normal-background: #226030;
     selected-normal-foreground: @foreground;
     selected-urgent-background: #939065;
     selected-urgent-foreground: @foreground;
 
     background-color: @background;
-    background: #26230D;
+    background: #0e0f06;
     foreground: #ffffff;
     border-color: @background;
     spacing: 2;
